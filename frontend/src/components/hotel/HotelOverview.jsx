@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { getAssetUrl } from "../../utils/config";
 
 const HotelOverview = () => {
   const [data, setData] = useState([]);
@@ -28,7 +29,7 @@ const HotelOverview = () => {
         </h1>
         <div className="flex justify-center items-center w-full flex-col lg:flex-row pt-12 lg:pt-0">
           <img
-            src={`http://localhost:5000/api/hotels/images/${data.HotelImg}`}
+            src={getAssetUrl(`hotels/images/${data.HotelImg}`)}
             alt="Hotel Image"
             className=" w-[320px] max-w-[55vw]  lg:w-[800px] rounded-lg mb-10"
           />
@@ -81,7 +82,7 @@ const HotelOverview = () => {
         {data.HotelImgs &&
           data.HotelImgs.map((image, index) => (
             <img
-              src={`http://localhost:5000/api/hotels/images/${image}`}
+              src={getAssetUrl(`hotels/images/${image}`)}
               alt={`Hotel Image ${index}`}
               key={index}
               class="ml-10 w-64 h-64 rounded-lg mb-2"

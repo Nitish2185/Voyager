@@ -49,7 +49,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem("user"); // remove the user from localStorage
-    axios.get("/api/logout").then(() => {
+    axios.post("auth/logout").then(() => {
       // make a request to your backend to clear cookies and session
       dispatch({ type: "LOGOUT" }); // update the state to clear the user
     });

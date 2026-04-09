@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate,useLocation } from "react-router-dom";
+import { getAssetUrl } from "../../utils/config";
 
 const VehicleBook = () => {
   const { state } = useLocation();
@@ -69,7 +70,7 @@ const VehicleBook = () => {
     <div className="lg:p-24 ">
       <div className="flex justify-center items-center w-full flex-col lg:flex-row pt-12 lg:pt-0">
         <img
-          src={`http://localhost:5000/api/vehicle/images/${state.vehicleMainImg}`}
+          src={getAssetUrl(`vehicle/images/${state.vehicleMainImg}`)}
           alt="vehMainImg"
           className="w-[320px] md:w-[700px] lg:w-[600px] rounded-lg"
         />

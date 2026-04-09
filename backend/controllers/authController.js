@@ -4,6 +4,15 @@ const jwt = require("jsonwebtoken");
 const { createError } = require("../middleware/error");
 const nodemailer = require("nodemailer");
 
+const buildFrontendUrl = (path = "") => {
+  const frontendUrl = (process.env.FRONTEND_URL || "http://localhost:3000").replace(
+    /\/+$/,
+    ""
+  );
+
+  return `${frontendUrl}/${path.replace(/^\/+/, "")}`;
+};
+
 const generateToken = (payload) => {
   const token = jwt.sign(payload, "secretKey", { expiresIn: "1h" });
   return token;
@@ -88,7 +97,7 @@ const resetpasswordrequest = async (req, res) => {
     }
 
     const token = generateToken({ userId: user._id });
-    const resetLink = `http://localhost:3000/reset-password?token=${token}`;
+    const resetLink = `${buildFrontendUrl("reset-password")}?token=${token}`;
 
     
     let transporter = nodemailer.createTransport({
