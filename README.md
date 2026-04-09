@@ -28,7 +28,7 @@ Changes made:
 Frontend (`frontend/.env`):
 
 ```env
-REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_API_URL=https://voyager-e1sb.onrender.com/api
 ```
 
 Backend (`backend/.env`):
@@ -64,7 +64,7 @@ This is the setup I recommend.
 4. Add env var:
 
 ```env
-REACT_APP_API_URL=https://your-render-backend.onrender.com/api
+REACT_APP_API_URL=https://voyager-e1sb.onrender.com/api
 ```
 
 5. Deploy.
@@ -82,7 +82,7 @@ You can also deploy both services on Render.
 
 Use the included `render.yaml`, then set these values in Render:
 
-- `REACT_APP_API_URL=https://your-api-service.onrender.com/api`
+- `REACT_APP_API_URL=https://voyager-e1sb.onrender.com/api`
 - `FRONTEND_URL=https://your-frontend-service.onrender.com`
 - `MONGO_URI=...`
 - `JWT=...`
