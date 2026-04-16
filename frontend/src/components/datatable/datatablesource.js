@@ -1,4 +1,6 @@
 //columns for the user table
+import { getAssetUrl } from "../../utils/config";
+
 export const userColumns = [
   // { field: "_id", headerName: "ID", width: 250 },
   {
@@ -58,7 +60,7 @@ export const vehicleColumns = [
           <img
             className="cellImg"
             src={
-              `vehicle/images/${params.row.vehicleMainImg}` ||
+              getAssetUrl(`vehicle/images/${params.row.vehicleMainImg}`) ||
               "https://i.ibb.co/MBtjqXQ/no-avatar.gif"
             }
             alt="avatar"
@@ -161,7 +163,7 @@ export const hotelColumns = [
           <img
             className="cellImg"
             src={
-              `hotels/images/${params.row.HotelImg}` ||
+              getAssetUrl(`hotels/images/${params.row.HotelImg}`) ||
               "https://i.ibb.co/MBtjqXQ/no-avatar.gif"
             }
             alt="avatar"

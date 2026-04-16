@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import { getAssetUrl } from "../../utils/config";
 
 
 const HotelCard = () => {
@@ -19,7 +20,7 @@ const HotelCard = () => {
               >
                 
                 <img
-                  src={`hotels/images/${item.HotelImg}`}
+                  src={getAssetUrl(`hotels/images/${item.HotelImg}`)}
                   alt=""
                   className="w-full object-cover h-64"
                 />
