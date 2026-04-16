@@ -56,7 +56,7 @@ console.log(newdata)
     
 
 
-const filteredData = newdata.some((employee) => employee.Eid ==Eid && employee.BasicSalary == BasicSalary && employee.Nic ==  Nic && employee.Name == Name);
+const filteredData = newdata.some((employee) => employee.Eid === Eid && employee.BasicSalary === BasicSalary && employee.Nic ===  Nic && employee.Name === Name);
 
     const maxDays = 26;
     const maxHours=130;
@@ -83,7 +83,7 @@ const filteredData = newdata.some((employee) => employee.Eid ==Eid && employee.B
         title: 'Invalid Employee Name Format',
         text: 'Please enter a Employee Name',
       });}
-      else if(Eid.length != 5 ){
+      else if(Eid.length !== 5 ){
       Swal.fire({
         icon: 'error',
         title: 'Invalid Employee Id',

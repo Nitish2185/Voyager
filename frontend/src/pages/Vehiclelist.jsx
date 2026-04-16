@@ -27,7 +27,7 @@ const Vehiclelist = ({ columns }) => {
     tickets
       .slice(0)
       .reverse()
-      .map((ticket, index) => {
+      .forEach((ticket, index) => {
         const ticketData = [
           index + 1,
           ticket.ownerName,

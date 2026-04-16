@@ -27,7 +27,7 @@ const Tourlist = ({ columns }) => {
     tickets
       .slice(0)
       .reverse()
-      .map((tour, index) => {
+      .forEach((tour, index) => {
         const ticketData = [
           index + 1,
           tour.name,

@@ -52,10 +52,8 @@ const checkOutDate = new Date(date.checkOutDate);
   }, []);
 
   const handleClick = () => {
-    if(user){{setOpenBook(true)}
-
-
-
+    if(user){
+      setOpenBook(true);
     }
     else{
       navigate("/login");

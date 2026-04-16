@@ -40,7 +40,7 @@ const Login = () => {
       setLoading2(false);
       if (res.data.isAdmin === true) {
         navigate("/admin");
-      } else if (res.data.details.type == "financeManager") {
+      } else if (res.data.details.type === "financeManager") {
         navigate("/finance");
       } else if (res.data.isAdmin === false) {
         navigate("/");

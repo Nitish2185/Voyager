@@ -24,8 +24,8 @@ const SerachResults = () => {
         const tours = response.data.filter((tour) => {
           return (
             tour.cities.split(",").includes(destination) ||
-            tour.duration == duration ||
-            tour.groupCount == maxsize
+            tour.duration === duration ||
+            tour.groupCount === maxsize
           );
         });
         console.log(tours);

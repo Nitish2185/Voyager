@@ -35,7 +35,7 @@ const SalaryS = () => {
     data
       .slice(0)
       .reverse()
-      .map((data, index) => {
+      .forEach((data, index) => {
         const RefundData = [
           index + 1,
           data.Name,

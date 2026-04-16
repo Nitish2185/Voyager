@@ -34,8 +34,8 @@ const DoUpdateTrain = () => {
     const handleFormSubmit = (event) =>{
         event.preventDefault();
 
-        axios.
-            put(`/train/update/${id}`,singleTrain)
+        axios
+            .put(`/train/update/${id}`,singleTrain)
             .then(() => {
                 Swal.fire({
                   title: "Do you want to save the changes?",
